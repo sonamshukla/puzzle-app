@@ -1,0 +1,5 @@
+<div class="option-wrapper">
+  <ng-container *ngFor = "let option of options">
+      <div class="option"  (click) = "chooseOption(option)" [ngClass]="{'selected' : option === selctedOption}">{{option}}</div>
+  </ng-container>
+</div>

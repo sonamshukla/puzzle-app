@@ -1,0 +1,19 @@
+<div class="que-wrapper">
+  <div class="qus-container" #qusContainer>
+    <div class="question" *ngFor="let question of questions; let i = index;" #ques>
+        <a [routerLink]="['/result']">Click here</a> to see the result
+        <div class="qus-txt">
+          <p> Javascript quiz {{i+1}} of {{questions.length}}</p>
+          <app-question [questionData] = "question"></app-question>
+        </div>
+        <div class="option-container">
+            <app-choose-option [questions] = "questions" [currentQusIndex] = "i"></app-choose-option>
+        </div>
+        
+     
+    </div>
+  </div>
+  
+  <button class="prv-btn" (click) = "prevClick()" [disabled] = "counter === 0">&#x3c;</button>
+  <button class="nxt-btn" (click)="nextClick()" [disabled] = "counter === questions.length-1">&#x3e;</button>
+</div>

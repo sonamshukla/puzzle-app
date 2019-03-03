@@ -1,0 +1,46 @@
+.que-wrapper{
+    height:400px;
+    width:500px;
+    overflow:hidden;
+    display: flex;
+    border: 14px solid #9e2828;
+    position:relative;
+    background-color: #4f824f;
+    color: white;
+    .qus-container{
+        display: flex;
+        flex-flow: column wrap;
+        width: 100%;
+    }
+    .question{
+        width: 100%;
+        flex: 1 100%;
+        padding: 10px 60px;
+    }
+    .nxt-btn,
+    .prv-btn{
+        position: absolute;
+        top: calc(50% - 20px);
+        border: none;
+        height: 40px;
+        border-radius: 50%;
+        background-color: #0000002e;
+        color: white;
+        width: 40px;
+        font-size: 20px;
+    }
+    .nxt-btn{
+        right: 4px;
+    }
+    .prv-btn{
+        left: 4px;
+    }
+    .option-container{
+        text-align: center;
+        width: 100%;
+        margin: 20px 0;
+    }
+    .qus-txt{
+        height: 68%;
+    }
+}

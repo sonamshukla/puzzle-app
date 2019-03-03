@@ -1,0 +1,31 @@
+<div class="container-table">
+  <div class="wrap-table">
+    <div class="table result m-b-110">
+      <div class="table-head">
+        <table>
+          <thead>
+            <tr class="row100 head">
+              <th class="column1">Sr no</th>
+              <th class="column2">Question</th>
+              <th class="column3">Correct Answer</th>
+              <th class="column4">User Answer</th>
+            </tr>
+          </thead>
+        </table>
+      </div>
+
+      <div class="table-body js-pscroll">
+        <table>
+          <tbody *ngIf="results.length">
+            <tr class="row100 body" *ngFor="let questionData of results; let i = index">
+              <td class="column1" >{{i+1}}</td>
+              <td class="column2">{{questionData.text}}</td>
+              <td class="column3">{{questionData.answer+1 | convertSn}}</td>
+              <td class="column4">{{questionData.studentAnswer ?questionData.studentAnswer:'--'}}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
